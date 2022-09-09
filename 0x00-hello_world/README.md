@@ -1,35 +1,9 @@
-julien@ubuntu:~/c/0x00$ export CFILE=main.c
+julien@ubuntu:~/c/0x00$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 4-puts.c && ./a.out
 
-julien@ubuntu:~/c/0x00$ cat main.c
+"Programming is like building a multilingual puzzle
 
-#include <stdio.h>
+julien@ubuntu:~/c/0x00$ echo $?
 
+0
 
-
-/**
-
- * main - Entry point
-
- *
-
- * Return: Always 0 (Success)
-
- */
-
-int main(void)
-
-{
-
-    return (0);
-
-}
-
-julien@ubuntu:~/c/0x00$ ./3-name 
-
-julien@ubuntu:~/c/0x00$ ls
-
-0-preprocessor  1-compiler   3-name  cisfun  main.o  Makefile
-
-100-intel       2-assembler  c       main.c  main.s
-
-julien@ubuntu:~/c/0x00$ 
+julien@ubuntu:~/c/0x00$
