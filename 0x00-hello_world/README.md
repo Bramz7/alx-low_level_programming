@@ -1,54 +1,35 @@
- pushq   %rbp                                                                                                            
+julien@ubuntu:~/c/0x00$ export CFILE=main.c
 
-                                                                                                                            
+julien@ubuntu:~/c/0x00$ cat main.c
 
-    .cfi_def_cfa_offset 16                                                                                                  
+#include <stdio.h>
 
-                                                                                                                            
 
-    .cfi_offset 6, -16                                                                                                      
 
-                                                                                                                            
+/**
 
-    movq    %rsp, %rbp                                                                                                      
+ * main - Entry point
 
-                                                                                                                            
+ *
 
-    .cfi_def_cfa_register 6                                                                                                 
+ * Return: Always 0 (Success)
 
-                                                                                                                            
+ */
 
-    movl    $0, %eax                                                                                                        
+int main(void)
 
-                                                                                                                            
+{
 
-    popq    %rbp                                                                                                            
+    return (0);
 
-                                                                                                                            
+}
 
-    .cfi_def_cfa 7, 8                                                                                                       
+julien@ubuntu:~/c/0x00$ ./3-name 
 
-                                                                                                                            
+julien@ubuntu:~/c/0x00$ ls
 
-    ret                                                                                                                     
+0-preprocessor  1-compiler   3-name  cisfun  main.o  Makefile
 
-                                                                                                                            
+100-intel       2-assembler  c       main.c  main.s
 
-    .cfi_endproc                                                                                                            
-
-                                                                                                                            
-
-.LFE0:                                                                                                                      
-
-                                                                                                                            
-
-    .size   main, .-main                                                                                                    
-
-                                                                                                                            
-
-    .ident  "GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.2) 5.4.0 20160609"                                                           
-
-                                                                                                                            
-
-    .section    .note.GNU-stack,"",@progbits                                                                                
-
+julien@ubuntu:~/c/0x00$ 
