@@ -1,75 +1,21 @@
-julien@ubuntu:~/c/0x00$ export CFILE=main.c
+julien@ubuntu:~/c/0x00$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -o quote 101-quote.c
 
-julien@ubuntu:~/c/0x00$ cat main.c
+julien@ubuntu:~/c/0x00$ ./quote
 
-#include <stdio.h>
+and that piece of art is useful" - Dora Korpar, 2015-10-19
 
+julien@ubuntu:~/c/0x00$ echo $?
 
+1
 
-/**
+julien@ubuntu:~/c/0x00$ ./quote 2> q
 
- * main - Entry point
+julien@ubuntu:~/c/0x00$ cat q
 
- *
+and that piece of art is useful" - Dora Korpar, 2015-10-19
 
- * Return: Always 0 (Success)
+julien@ubuntu:~/c/0x00$ grep printf < 101-quote.c
 
- */
+julien@ubuntu:~/c/0x00$ grep put < 101-quote.c
 
-int main(void)
-
-{
-
-    return (0);
-
-}
-
-julien@ubuntu:~/c/0x00$ ./100-intel 
-
-julien@ubuntu:~/c/0x00$ cat main.s
-
-    .file   "main.c"
-
-    .intel_syntax noprefix
-
-    .text
-
-    .globl  main
-
-    .type   main, @function
-
-main:
-
-.LFB0:
-
-    .cfi_startproc
-
-    push    rbp
-
-    .cfi_def_cfa_offset 16
-
-    .cfi_offset 6, -16
-
-    mov rbp, rsp
-
-    .cfi_def_cfa_register 6
-
-    mov eax, 0
-
-    pop rbp
-
-    .cfi_def_cfa 7, 8
-
-    ret
-
-    .cfi_endproc
-
-.LFE0:
-
-    .size   main, .-main
-
-    .ident  "GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.2) 5.4.0 20160609"
-
-    .section    .note.GNU-stack,"",@progbits
-
-julien@ubuntu:~/c/0x00$ 
+julien@ubuntu:~/c/0x00$
