@@ -1,33 +1,43 @@
-julien@ubuntu:~/c/0x00$ gcc 6-size.c -m32 -o size32 2> /tmp/32
+#include <stdio.h>
 
-julien@ubuntu:~/c/0x00$ gcc 6-size.c -m64 -o size64 2> /tmp/64
 
-julien@ubuntu:~/c/0x00$ ./size32
 
-Size of a char: 1 byte(s)
+/**
 
-Size of an int: 4 byte(s)
+ * main - Entry point
 
-Size of a long int: 4 byte(s)
+ *
 
-Size of a long long int: 8 byte(s)
+ * Return: Always 0 (Success)
 
-Size of a float: 4 byte(s)
+ */
 
-julien@ubuntu:~/c/0x00$ ./size64
+int main(void)
 
-Size of a char: 1 byte(s)
+{
 
-Size of an int: 4 byte(s)
+	int a;
 
-Size of a long int: 8 byte(s)
+	long int b;
 
-Size of a long long int: 8 byte(s)
+	long long int c;
 
-Size of a float: 4 byte(s)
+	char d;
 
-julien@ubuntu:~/c/0x00$ echo $?
+	float f;
 
-0
 
-julien@ubuntu:~/c/0x00$ 
+
+	printf("Size of a char: %lu byte(s)\n", (unsigned long)sizeof(d));
+
+	printf("Size of an int: %lu byte(s)\n", (unsigned long)sizeof(a));
+
+	printf("Size of a long int: %lu byte(s)\n", (unsigned long)sizeof(b));
+
+	printf("Size of a long long int: %lu byte(s)\n", (unsigned long)sizeof(c));
+
+	printf("Size of a float: %lu byte(s)\n", (unsigned long)sizeof(f));
+
+	return (0);
+
+}
