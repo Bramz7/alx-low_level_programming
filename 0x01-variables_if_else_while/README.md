@@ -1,7 +1,7 @@
-julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-print_alphabet.c -o 2-print_alphabet
+julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-print_alphabets.c -o 3-print_alphabets
 
-julien@ubuntu:~/0x01$ ./2-print_alphabet 
+julien@ubuntu:~/0x01$ ./3-print_alphabets | cat -e
 
-abcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$
 
-julien@ubuntu:~/0x01$
+julien@ubuntu:~/0x01$ 
