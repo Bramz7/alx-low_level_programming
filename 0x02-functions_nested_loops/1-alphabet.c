@@ -1,65 +1,31 @@
-#include <stdlib.h>
-
-#include <time.h>
-
-#include <stdio.h>
+#include "main.h"
 
 /**
 
-* main - print if the number is postive, zero, or negative
+ * print_alphabet - function to print abc
 
-*
+ *
 
-* Description: using the main function
+ * Return: 0
 
-* this program prints "Programming is positive, zero, or negative
+ */
 
-* Return: 0
-
-*/
-
-int main(void)
+void print_alphabet(void)
 
 {
 
-int n;
-
-int l;
+	char c;
 
 
 
-srand(time(0));
+	for (c = 'a'; c <= 'z'; c++)
 
-n = rand() - RAND_MAX / 2;
+	{
 
-l = n % 10;
+		_putchar(c);
 
+	}
 
-
-if (l > 5)
-
-{
-
-	printf("Last digit of %d is %d and is greater than 5\n", n, l);
-
-}
-
-else if (l == 0)
-
-{
-
-	printf("Last digit of %d is %d and is 0\n", n, l);
-
-}
-
-else
-
-{
-
-	printf("Last digit of %d is %d and is less than 6 and not 0\n", n, l);
-
-}
-
-return (0);
+_putchar('\n');
 
 }
