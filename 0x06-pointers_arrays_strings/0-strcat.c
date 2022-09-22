@@ -39,11 +39,3 @@ char *strcat(char *dest, const char *src)
 
 }
 
-Footer
-
-© 2022 GitHub, Inc.
-
-Footer navigation
-
-Terms
-
