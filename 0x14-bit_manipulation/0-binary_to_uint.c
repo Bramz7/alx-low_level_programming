@@ -1,47 +1,77 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include "holberton.h"
+#include "main.h"
 
 /**
-  * binary_to_uint - Converts a binary number to an unsigned int
-  * @b: The binary string to converts
+  *_strlen - returns the length of a string.
+  *@s: pointer to string.
   *
-  * Return: The positive number converted from a binary
-  */
-unsigned int binary_to_uint(const char *b)
+  *Return: length.
+*/
+
+unsigned int _strlen(const char *s)
 {
-	unsigned int len = 0, count = 0, sum = 0;
+	unsigned int i;
 
-	if (b == NULL)
-		return (0);
-
-	len = _strlen(b);
-	while (len--)
+	i = 0;
+	while (s[i] != '\0')
 	{
-		if (b[len] != 48 && b[len] != 49)
-			return (0);
-
-		if (b[len] == 49)
-			sum += 1 << count;
-
-		count++;
+		i++;
 	}
-
-	return (sum);
+	return (i);
 }
 
 /**
-  * _strlen - Returns the length of a string
-  * @s: String to count
+  *getp - returns the value of x to the power of y.
+  *@x: number.
+  *@y: power.
   *
-  * Return: String length
-  */
-int _strlen(const char *s)
+  *Return: x to the pow of y.
+  *0 if x < 0.
+*/
+
+int getp(int x, int y)
 {
-	int c = 0;
+	if (y < 0)
+		return (0);
+	if (y == 0)
+		return (1);
+	if (y == 1)
+		return (x);
 
-	while (s[c])
-		c++;
+	return (x * getp(x, y - 1));
+}
 
-	return (c);
+/**
+  *binary_to_uint - converts a binary number to an unsigned int.
+  *@b: pointer to string containing 0 and 1.
+  *
+  *Return: converted number or 0 if b is null or has chars not 0 or 1.
+*/
+
+unsigned int binary_to_uint(const char *b)
+{
+	unsigned int n, l, i;
+	int power;
+
+	if (!b)
+		return (0);
+
+	l = _strlen(b);
+	power = 0;
+	n = 0;
+	i = l - 1;
+	while (l > 0)
+	{
+		if (b[i] == 48 || b[i] == 49)
+		{
+			n = n + ((b[i] - 48) * getp(2, power));
+			power++;
+			i--;
+			l--;
+		}
+		else
+		{
+			return (0);
+		}
+	}
+	return (n);
 }
